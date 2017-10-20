@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta charset="utf-8">
+		<title>Perl Project</title>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>          
+		<link rel="stylesheet" href="https://bootswatch.com/united/bootstrap.min.css">	
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <link rel="stylesheet" type="text/css" href="clock/dist/jquery-clockpicker.css">
+        <script type="text/javascript" src="clock/dist/bootstrap-clockpicker.min.js"></script>
+		
+   </head>
+  
+   <body >
+   <div class="navbar navbar-default">
+   </div>
+   <div class="container">
+   
+     <div class="col-md-8">
+     <div id="errorMsg"></div>
+	<div class="col-md-8">
+     <input type="button" value="New" id="new"  class="btn btn-primary">
+	 </div>
+	 <br/>
+	 <br/>
+      <form action="perl/postAppointmentService.cgi" id="form" class="form">
+		  <div class="form-group">
+			<label for="date" > Date</label>
+			<input id="date" class="form-control" type="text" size="8" name="date"/>
+		   </div>
+		   <label for="time"> Time  </label>
+		   <div class="input-group clockpicker">
+			<input type="text" class="form-control" size="8" id="time" name="time" readonly />
+			<span class="input-group-addon">
+			<span class="glyphicon glyphicon-time"></span>
+			</span>
+		   </div>
+		   <label for="description"> Description  </label>
+		   <div class="form-group">
+			<input id="description" class="form-control" type="text" size="8" name="description" required/>
+		  </div>
+		  <div class="form-group">
+		   <input type="button" value="Cancel" id="cancel" class="btn btn-primary"/>
+		   <input type="button" value="Add" id="add" class="btn btn-primary"/>
+		   </div>
+      </form>
+     <br/>
+     <div id="main" class="col-md-8">
+      <input class="form-control" type="text" id="queryParam"/>
+	  <br/>
+      <input type="button" value="Search" id="searchBtn"  class="btn btn-primary" />
+	 </div>
+	 <br/>
+	 <br/>
+     <div id="table" class="col-md-8"></div>
+	 </div>
+	</div>
+   </body>
+</html>
+<script type="text/javascript" src="js/functions.js"></script>
